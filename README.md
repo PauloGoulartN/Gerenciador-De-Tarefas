@@ -1,5 +1,10 @@
-<<<<<<< HEAD
-# React + Vite + Tailwind CSS
+# 📝 Gerenciador de Tarefas
 
-# Gerenciador-De-Tarefas
-Gerenciador de tarefas interativo desenvolvido em React.js. Projeto focado na aplicação prática de conceitos fundamentais da biblioteca e boas práticas de Front-End.
+> 🚧 **Projeto em desenvolvimento**
+
+Aplicação web para gerenciamento de tarefas desenvolvida com **React**, **Vite** e **Tailwind CSS**. O objetivo principal deste projeto é a consolidação de conceitos fundamentais do ecossistema React, boas práticas de Front-End e arquitetura de componentes.
+
+### 🛠️ Tecnologias
+- **React**
+- **Vite**
+- **Tailwind CSS**
