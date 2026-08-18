@@ -8,19 +8,19 @@ function App() {
   const [tasks, setTasks] = useState([
     {
       id: 1,
-      tittle: "Estudar React",
+      title: "Estudar React",
       description: "Estudar React para aprender a criar aplicações web",
       isCompleted: false,
     },
     {
       id: 2,
-      tittle: "Estudar Node.js",
+      title: "Estudar Node.js",
       description: "Estudar Node.js para aprender a criar aplicações web",
       isCompleted: false,
     },
     {
       id: 3,
-      tittle: "Estudar postgreSQL",
+      title: "Estudar postgreSQL",
       description: "Estudar postgreSQL para aprender a criar aplicações web",
       isCompleted: false,
     },
@@ -45,10 +45,10 @@ function App() {
     setTasks(newTask);
   }
 
-  function onAddTaskSubmit(tittle, description) {
+  function onAddTaskSubmit(title, description) {
     const newTask = {
       id: v4(),
-      tittle,
+      title,
       description,
       isCompleted: false,
     };
