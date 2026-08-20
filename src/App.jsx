@@ -1,30 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AddTask from "./components/AddTask";
 import Tasks from "./components/Tasks";
 import { v4 } from "uuid";
 
-// ARMAZENAR STATE TASK
+// ARMAZENAR LOCAL STORAGE TASK
 function App() {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: "Estudar React",
-      description: "Estudar React para aprender a criar aplicações web",
-      isCompleted: false,
-    },
-    {
-      id: 2,
-      title: "Estudar Node.js",
-      description: "Estudar Node.js para aprender a criar aplicações web",
-      isCompleted: false,
-    },
-    {
-      id: 3,
-      title: "Estudar postgreSQL",
-      description: "Estudar postgreSQL para aprender a criar aplicações web",
-      isCompleted: false,
-    },
-  ]);
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("tasks")) || [],
+  );
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
+  // useEffect(() => {
+  //   const fetchTasks = async () => {
+  //     // CHAMAR A API
+  //     const response = await fetch(
+  //       "https://jsonplaceholder.typicode.com/todos?_limit=10",
+  //       {
+  //         method: "GET",
+  //       },
+  //     );
+  //     // PEGAR DADOS QUE ELA RETORNA
+  //     const data = await response.json();
+
+  //     // Armazenar/persistir dados no state
+  //     setTasks(data);
+
+  //   };
+  //   // fetchTasks();
+  // }, []);
 
   // FUNÇÃO PARA ALTERAR O ESTADO DA TASK
   function onTaskClick(taskId) {
