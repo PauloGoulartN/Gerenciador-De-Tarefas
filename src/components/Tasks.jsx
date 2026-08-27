@@ -19,7 +19,7 @@ function Tasks({ tasks, onTaskClick, deleteTaskOnClick }) {
             onClick={() => onTaskClick(task.id)}
             className={
               "bg-slate-900 text-left w-full flex items-center gap-2 text-white p-2 rounded-md " +
-              (task.isCompleted ? "bg-emerald-500 line-through" : "")
+              (task.isCompleted ? "bg-emerald-500 line-through" : "bg-slate-900")
             }
           >
             {task.isCompleted && <CheckIcon />}
