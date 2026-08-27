@@ -9,8 +9,8 @@ function TaskPage() {
   const description = searchParams.get("description");
   // Pagina mostra apenas oque está dentro do return
   return (
-    <div className="h-screen w-screen bg-slate-500 p-6">
-      <div className="w-[500px] space-y-4">
+    <div className="h-screen w-screen bg-slate-900 p-6">
+      <div className="w-[500px] mx-auto space-y-4">
         <div className="flex justify-center relative mb-6">
           <button
             onClick={() => navigate(-1)} // navigate(-1) APENAS VOLTA PARA A PAGINA QUE VOCÊ ESTAVA E NÃO DIRECIONA PARA NENHUMA PAGINA ESPECIFICA
@@ -21,11 +21,9 @@ function TaskPage() {
           <Title>Detalhes da Tarefa</Title>
         </div>
 
-        <div className="bg-slate-200 p-4 rounded-md">
-          <h2 className="text-xl font-bold text-slate-600">
-            {title}
-          </h2>
-          <p className="text-slate-600">{description}</p>
+        <div className="bg-slate-700 p-4 rounded-md">
+          <h2 className="text-xl font-bold text-slate-200">{title}</h2>
+          <p className="text-slate-200">{description}</p>
         </div>
       </div>
     </div>
